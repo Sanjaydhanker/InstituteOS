@@ -1,5 +1,6 @@
 import React from 'react'
-import Studentsidebar from '../components/Studentsidebar'
+import Studentsidebar from './Studentsidebar'
+import { Outlet } from 'react-router-dom'
 
 function Studentdashboard() {
   return (
@@ -10,6 +11,8 @@ function Studentdashboard() {
            <Studentsidebar/>  
         
         <div className='flex-7 h-screen  bg-amber-200'>
+
+        <Outlet></Outlet>
 
         </div>
 
