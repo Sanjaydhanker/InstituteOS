@@ -10,7 +10,7 @@ function Studentdashboard() {
        
            <Studentsidebar/>  
         
-        <div className='flex-7 h-screen  bg-amber-200'>
+        <div className='flex-7 h-screen'>
 
         <Outlet></Outlet>
 

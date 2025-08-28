@@ -10,6 +10,9 @@ import Profile from "./components/Student/Profile";
 import Mycourse from "./components/Student/Mycourse";
 import PurchaseHistory from "./components/Student/PurchaseHistory";
 import Settings from "./components/Student/Settings";
+import ErrorPage from "./pages/ErrorPage";
+import EditProfile from "./components/Student/EditProfile";
+import ChangePassword from "./components/Student/ChangePassword";
 
 function App() {
   return (
@@ -23,8 +26,12 @@ function App() {
           <Route path="my-courses" element={<Mycourse />} />
           <Route path="purchase-history" element={<PurchaseHistory />} />
           <Route path="settings" element={<Settings />} />
+          <Route path="edit-profile" element={<EditProfile/>}/>
+          <Route path="change-password" element={<ChangePassword/>}/>
+          <Route path="*" element={<ErrorPage />} />
         </Route>
         <Route path="/admindashboard" element={<Admindashboard />}></Route>
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   );

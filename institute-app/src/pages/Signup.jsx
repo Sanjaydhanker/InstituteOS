@@ -4,11 +4,12 @@ import { useNavigate } from "react-router-dom";
 function Signup() {
   const navigate = useNavigate();
   const [input, setInput] = useState({
-    username: "",
+    fullname: "",
     email: "",
     password: "",
     dob:"",
-    contactNo:""
+    contactno:"",
+    course:""
   });
 
   const signupHandling = (e) => {
@@ -38,11 +39,11 @@ function Signup() {
       <div className="w-120 rounded-2xl shadow-2xl hover:shadow-gray-500 p-10">
         <h1 className="text-3xl font-bold mb-6 text-center">Signup</h1>
         <input
-          name="username"
+          name="fullname"
           type="text"
-          placeholder="Username"
+          placeholder="Full name"
           className="mb-4 w-full p-2 border rounded"
-          value={input.username}
+          value={input.fullname}
           onChange={(e) =>
             setInput({ ...input, [e.target.name]: e.target.value })
           }
@@ -78,11 +79,21 @@ function Signup() {
           }
         />
         <input
-          name="contactNo"
+          name="contactno"
           type="text"
           placeholder="Contact No"
           className="mb-4 w-full p-2 border rounded"
-          value={input.contactNo}
+          value={input.contactno}
+          onChange={(e) =>
+            setInput({ ...input, [e.target.name]: e.target.value })
+          }
+        />
+        <input
+          name="course"
+          type="text"
+          placeholder="Exa Btech"
+          className="mb-4 w-full p-2 border rounded"
+          value={input.course}
           onChange={(e) =>
             setInput({ ...input, [e.target.name]: e.target.value })
           }

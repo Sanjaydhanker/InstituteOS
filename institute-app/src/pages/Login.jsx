@@ -27,6 +27,7 @@ function Login() {
     );
 
     if (validUser) {
+       localStorage.setItem("currentUser", JSON.stringify(validUser));
       alert(`Welcome ${validUser.username}`);
       navigate("/studentdashboard");
     } else {
