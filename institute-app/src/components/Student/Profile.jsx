@@ -5,7 +5,7 @@ function Profile() {
 const navigate = useNavigate();
 
 const [user , setUser] = useState({
-  fullname:"",
+  username:"",
   dob:"",
   email:"",
   contactno:"",
@@ -30,7 +30,7 @@ const [user , setUser] = useState({
               className="w-32 h-32 rounded-full border-4 border-indigo-500 shadow-md"
             />
             <h2 className="mt-4 text-2xl font-bold text-gray-800">
-              {user.fullname}
+              {user.username}
             </h2>
             <p className="text-gray-600">{user.email}</p>
             <p className="text-indigo-600 font-semibold">
@@ -45,7 +45,7 @@ const [user , setUser] = useState({
             </h3>
             <div className="mt-4 space-y-3">
               <p className="text-gray-700">
-                <span className="font-semibold">Username:</span>  {user.fullname}
+                <span className="font-semibold">Username:</span>  {user.username}
               </p>
               <p className="text-gray-700">
                 <span className="font-semibold">Email:</span> {user.email}
