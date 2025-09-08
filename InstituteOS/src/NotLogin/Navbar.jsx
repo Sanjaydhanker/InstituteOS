@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { IoReorderThree ,IoClose } from "react-icons/io5";
+import { IoReorderThree, IoClose } from "react-icons/io5";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(prev =>  !prev);
+    setMenuOpen((prev) => !prev);
   };
 
   return (
@@ -25,22 +25,38 @@ function Navbar() {
         >
           <ul className="flex flex-col md:flex-row md:items-center gap-6 md:gap-[4vw]">
             <li>
-              <Link className="hover:text-indigo-600" to="/" onClick={() => setMenuOpen(false)}>
+              <Link
+                className="hover:text-indigo-600"
+                to="/"
+                onClick={() => setMenuOpen(false)}
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link className="hover:text-indigo-600" to="/features" onClick={() => setMenuOpen(false)}>
-                Features
+              <Link
+                className="hover:text-indigo-600"
+                to="/courses"
+                onClick={() => setMenuOpen(false)}
+              >
+                Courses
               </Link>
             </li>
             <li>
-              <Link className="hover:text-indigo-600" to="/about" onClick={() => setMenuOpen(false)}>
+              <Link
+                className="hover:text-indigo-600"
+                to="/about"
+                onClick={() => setMenuOpen(false)}
+              >
                 About
               </Link>
             </li>
             <li>
-              <Link className="hover:text-indigo-600" to="/contact" onClick={() => setMenuOpen(false)}>
+              <Link
+                className="hover:text-indigo-600"
+                to="/contact"
+                onClick={() => setMenuOpen(false)}
+              >
                 Contact
               </Link>
             </li>
@@ -54,12 +70,6 @@ function Navbar() {
             to="/login"
           >
             Login
-          </Link>
-          <Link
-            className="rounded bg-indigo-600 text-white py-2 px-4 hover:bg-indigo-700"
-            to="/register"
-          >
-            SignUp
           </Link>
 
           {/* Hamburger Icon */}
